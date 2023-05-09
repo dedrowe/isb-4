@@ -4,7 +4,7 @@ import logging
 logger = logging.getLogger()
 logger.setLevel('INFO')
 
-settings = {
+SETTINGS = {
     'hash': 'files/hash.txt',
     'bin': 'files/bin_numbers.txt',
     'last_four_numbers': 'files/last_four_numbers.txt',
@@ -32,4 +32,4 @@ def read_settings(file_with_settings: str = 'files/settings.json') -> dict:
 
 if __name__ == "__main__":
     with open('files/settings.json', 'w') as f:
-        json.dump(settings, f)
+        json.dump(SETTINGS, f)
